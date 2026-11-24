@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lee O'neil Angelo · Community Manager</title>
+<meta name="description" content="Lee O'neil Angelo, community manager freelance : stratégie de réseaux sociaux, posts prêts à publier, visuels et carrousels, page entreprise et profil des dirigeants.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: un expert accessible, concret et chaleureux, sans jargon
+   IDEA: une page LinkedIn bien tenue, transformée en vitrine
+   PICTURE: le portrait détouré posé sur un grand disque jaune, avec un post en clair qui flotte à côté
+   COLOUR and TYPE: gris foncé #323232 dominant, blanc en appui, jaune #FFDB00 en accent (jamais sur blanc) ; League Spartan + Inter
+   LAYOUT: hero plein écran, bandes alternées gris / blanc, contact en bande jaune pleine largeur */
+:root{color-scheme:dark;--g:#323232;--g2:#262626;--g3:#3d3d3d;--y:#FFDB00;--w:#fff;--mut:#c9c9c9;--ink:#1f1f1f;--mut2:#5a5a5a}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--g);color:var(--w);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"League Spartan",Inter,sans-serif;font-weight:700;line-height:1.05;text-wrap:balance;margin:0}
+h1{font-size:clamp(38px,6vw,64px)}h2{font-size:clamp(30px,4vw,46px)}h3{font-size:22px;line-height:1.15}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(48px,7vw,104px) max(5vw,18px)}
+.light{background:var(--w);color:var(--ink)}
+.hl{background:var(--y);color:var(--g);padding:0 .18em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:600 16px Inter,sans-serif}
+.btn.y{background:var(--y);color:var(--g)}
+.btn.o{border-color:currentColor}
+.btn.d{background:var(--g);color:var(--w)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+.light .btn:focus-visible{outline-color:var(--g)}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(50,50,50,.94);backdrop-filter:blur(8px);border-bottom:1px solid #444}
+nav .wrap{display:flex;align-items:center;gap:20px;padding:10px max(5vw,18px);flex-wrap:wrap}
+.logo{font:800 20px "League Spartan",sans-serif;text-decoration:none;margin-right:auto}
+.logo b{color:var(--y)}
+.links{display:flex;gap:4px 18px;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--mut);font-size:15px;padding:8px 0}
+.links a:hover{color:var(--w)}
+nav .btn{min-height:42px;padding:8px 18px;font-size:15px}
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.hero .lead{font-size:19px;color:var(--mut);margin:22px 0 30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;color:var(--mut);font-size:15px}
+.facts span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--y);margin-right:9px;vertical-align:middle}
+.pic{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;justify-self:center}
+.disc{position:absolute;inset:8% 4% 0 4%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe84d,var(--y) 55%,#e9c600)}
+.pic img.portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px;box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.bubble{position:absolute;right:-3%;bottom:5%;width:min(230px,46%);background:var(--w);color:var(--ink);border-radius:14px;padding:14px 16px;box-shadow:0 14px 30px rgba(0,0,0,.35);font-size:13px;line-height:1.45;animation:float 6s ease-in-out infinite}
+.bubble strong{display:block;font:700 15px "League Spartan",sans-serif;margin-bottom:4px}
+.bubble .bar{height:6px;border-radius:3px;background:#e6e6e6;margin-top:7px}
+.bubble .bar.s{width:60%}
+@keyframes float{50%{transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){.bubble{animation:none}html{scroll-behavior:auto}}
+/* sections */
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 48px;align-items:end;margin-bottom:44px}
+.head p{color:var(--mut2);margin:0;font-size:17px}
+.dark .head p{color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px}
+.card{border-radius:18px;padding:26px;background:#f3f3f3;color:var(--ink)}
+.card .ic{width:52px;height:52px;border-radius:14px;background:var(--g);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:28px;height:28px}
+.card h3{margin-bottom:10px}
+.card p{margin:0;color:var(--mut2);font-size:15.5px}
+/* method */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative}
+.step{padding:0 22px 0 0}
+.step .n{width:58px;height:58px;border-radius:50%;background:var(--y);color:var(--g);font:800 26px/58px "League Spartan",sans-serif;text-align:center;position:relative;z-index:1}
+.step .line{height:2px;background:#555;margin:-30px 0 30px 58px}
+.step:last-child .line{background:transparent}
+.step h3{margin:22px 0 8px}
+.step p{color:var(--mut);font-size:15.5px;margin:0}
+.step .free{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--g);background:var(--y);border-radius:999px;padding:3px 12px}
+/* demos */
+.note{display:flex;gap:10px;align-items:flex-start;background:#f3f3f3;border-left:4px solid var(--g);padding:14px 18px;border-radius:8px;font-size:15px;color:var(--mut2);margin-bottom:28px;max-width:none}
+.demos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.demo{border:1px solid #e2e2e2;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;background:var(--w)}
+.demo .vis{background:var(--g);aspect-ratio:4/3.2;padding:22px;color:var(--w);display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.demo .tag{position:absolute;top:12px;right:12px;font-size:12px;font-weight:600;background:var(--w);color:var(--g);border-radius:999px;padding:3px 10px}
+.demo .cap{padding:20px 22px 24px}
+.demo .cap h3{font-size:19px;margin-bottom:6px}
+.demo .cap p{margin:0;color:var(--mut2);font-size:15px}
+.post{background:var(--w);color:var(--ink);border-radius:12px;padding:14px;font-size:13px;line-height:1.45;height:100%;display:flex;flex-direction:column;gap:8px}
+.post .who{display:flex;gap:10px;align-items:center;font-weight:600}
+.post .av{width:34px;height:34px;border-radius:50%;background:var(--y) url(photo-lee.jpg) center 22%/190% no-repeat;flex:none}
+.post .who small{display:block;font-weight:400;color:#777;font-size:12px}
+.post p{margin:0}
+.slides{display:flex;gap:10px;height:100%;align-items:center}
+.slide{flex:1;aspect-ratio:4/5;border-radius:10px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;font:700 15px/1.1 "League Spartan",sans-serif}
+.slide.a{background:var(--y);color:var(--g)}
+.slide.b{background:var(--g3);color:var(--w)}
+.slide small{font:500 11px Inter,sans-serif;opacity:.8}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;height:100%}
+.page{border-radius:10px;background:var(--w);color:var(--ink);overflow:hidden;display:flex;flex-direction:column;font-size:11px}
+.page .cov{height:34%;background:#ddd}
+.page.after .cov{background:linear-gradient(90deg,var(--g) 60%,var(--y) 60%)}
+.page .bd{padding:8px;display:flex;flex-direction:column;gap:5px}
+.page .ln{height:5px;border-radius:3px;background:#e4e4e4}
+.page b{font-size:12px}
+/* video */
+.vid .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+video{width:100%;max-width:420px;aspect-ratio:1080/1350;border-radius:20px;background:#000;display:block;justify-self:center;box-shadow:0 0 0 8px var(--g3)}
+.vid p{color:var(--mut)}
+.why{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.why li{display:flex;gap:14px}
+.why li b{display:block;font-family:"League Spartan",sans-serif;font-size:19px}
+.why li span{color:var(--mut);font-size:15.5px}
+.why svg{flex:none;width:26px;height:26px;margin-top:2px}
+/* contact */
+.contact{background:var(--y);color:var(--g)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
+.contact p{font-size:18px}
+.chan{display:grid;gap:10px;margin-top:26px}
+.chan a{display:flex;align-items:center;gap:14px;background:var(--g);color:var(--w);text-decoration:none;border-radius:14px;padding:14px 18px;min-height:56px}
+.chan a small{display:block;color:var(--mut);font-size:13px}
+.chan svg{width:24px;height:24px;flex:none;fill:var(--y)}
+form{background:var(--g);color:var(--w);border-radius:22px;padding:clamp(22px,3vw,34px);display:grid;gap:14px}
+form h3{font-size:26px}
+label{display:grid;gap:6px;font-size:14px;font-weight:600}
+input,textarea{font:16px Inter,sans-serif;padding:12px 14px;border-radius:10px;border:1px solid #555;background:var(--g2);color:var(--w);min-height:48px}
+textarea{min-height:100px;resize:vertical}
+form .hint{font-size:13px;color:var(--mut);margin:0}
+footer{background:var(--g2);color:var(--mut);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;padding:26px max(5vw,18px)}
+/* v2 */
+.hello{font-size:18px;color:var(--mut);margin:0 0 10px}
+.role{font:700 clamp(20px,2.4vw,26px) "League Spartan",sans-serif;color:var(--y);margin:14px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px;max-width:520px}
+.stat{background:var(--g3);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font:800 34px/1 "League Spartan",sans-serif;color:var(--y)}
+.stat span{font-size:14px;color:var(--mut)}
+.avail{position:absolute;left:-3%;bottom:26%;background:var(--g);border:1px solid #555;border-radius:14px;padding:10px 14px;font-size:13px;color:var(--mut);display:flex;gap:10px;align-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.avail b{color:var(--w);display:block;font-size:14px}
+.avail i{width:10px;height:10px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.25);flex:none}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.about p{font-size:17px;color:var(--mut2)}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badges span{background:var(--g);color:var(--w);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600}
+.about video{box-shadow:0 0 0 8px #f0f0f0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+.sk{background:var(--g3);border-radius:18px;padding:24px}
+.sk h3{font-size:19px;margin-bottom:14px;color:var(--y)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--g);border:1px solid #555;border-radius:10px;padding:8px 14px;font-size:15px;font-weight:600}
+.proj{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);border-radius:22px;overflow:hidden;background:var(--g);color:var(--w);margin-bottom:28px}
+.proj .pv{background:var(--y);padding:clamp(22px,3vw,36px);display:flex;align-items:center;justify-content:center;min-height:300px}
+.proj .pb{padding:clamp(22px,3vw,36px)}
+.proj .live{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:600;background:var(--g3);border-radius:999px;padding:5px 12px;margin-bottom:16px}
+.proj .live i{width:8px;height:8px;border-radius:50%;background:#3ddc84}
+.proj p{color:var(--mut)}
+.proj ul{margin:0;padding-left:20px;color:var(--mut)}
+.proj li{margin-bottom:6px}
+.proj .net{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.proj .net span{border:1px solid #555;border-radius:999px;padding:4px 12px;font-size:13px}
+.phone{width:min(260px,100%);background:var(--w);color:var(--ink);border-radius:18px;padding:14px;box-shadow:0 20px 40px rgba(0,0,0,.25);font-size:13px;display:grid;gap:10px}
+.phone .ban{height:70px;border-radius:10px;background:var(--g);display:flex;align-items:center;padding:0 14px;color:var(--w);font:800 20px "League Spartan",sans-serif}
+.phone .ban b{color:var(--y)}
+.phone .ln{height:6px;border-radius:3px;background:#e4e4e4}
+.sub{font-size:22px;margin:8px 0 18px}
+.gal-wrap{position:relative;margin-bottom:56px}
+.gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.gal figure{flex:none;width:min(280px,75vw);margin:0;scroll-snap-align:start}
+.gal img,.docs img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid #e2e2e2}
+.gal figcaption{font-size:14px;color:var(--mut2);margin-top:8px}
+.gal-nav{display:flex;gap:10px;justify-content:flex-end;margin-top:10px}
+.gal-nav button{width:48px;height:48px;border-radius:50%;border:0;background:var(--g);color:var(--w);font-size:20px;cursor:pointer}
+.gal-nav button:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+.docs-row{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.tuto{width:100%;max-width:320px;aspect-ratio:720/1280;border-radius:18px;background:#000;display:block;box-shadow:none}
+.cap2{font-size:14px;color:var(--mut2);margin-top:10px}
+.docs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.docs figure{margin:0}
+.docs figcaption{font-size:14px;color:var(--mut2);margin-top:8px}
+.docs figcaption b{display:block;color:var(--ink);font-size:15px}
+@media(max-width:700px){.docs-row{grid-template-columns:minmax(0,1fr)}.docs{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:900px){
+ .about,.proj{grid-template-columns:minmax(0,1fr)}
+ .hero .wrap,.vid .wrap,.contact .wrap,.head{grid-template-columns:minmax(0,1fr)}
+ .pic{max-width:420px}
+ .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}
+ .step .line{display:none}
+ .demos{grid-template-columns:minmax(0,1fr)}
+ .demo .vis{aspect-ratio:auto;min-height:240px}
+ .links{display:none}
+}
+@media(max-width:520px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat b{font-size:26px}.avail{bottom:4%;left:0}.steps{grid-template-columns:minmax(0,1fr)}.bubble{display:none}nav .btn{display:none}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigation principale"><div class="wrap">
+  <a class="logo" href="#accueil">Lee O'neil <b>Angelo</b></a>
+  <div class="links"><a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#projets">Projets</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+  <a class="btn y" href="#contact">Audit gratuit</a>
+</div></nav>
+
+<header class="band hero" id="accueil"><div class="wrap">
+  <div>
+    <p class="hello">Bonjour, je suis</p>
+    <h1>Lee O'neil <span class="hl">Angelo</span></h1>
+    <p class="role">Community Manager freelance</p>
+    <p class="lead">J'aide les marques à gérer leurs réseaux sociaux et à communiquer clairement, pour que leurs futurs clients comprennent ce qu'elles font et aient envie de les contacter.</p>
+    <div class="ctas">
+      <a class="btn y" href="#contact">Demander mon audit gratuit</a>
+      <a class="btn o" href="#projets">Voir mon travail</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>1 an</b><span>d'expérience</span></div>
+      <div class="stat"><b>3</b><span>projets réalisés</span></div>
+      <div class="stat"><b>3</b><span>clients accompagnés</span></div>
+    </div>
+  </div>
+  <div class="pic">
+    <img class="portrait" src="photo-lee.jpg" alt="Portrait de Lee O'neil Angelo, en veste bleu marine et chemise blanche, souriant devant un cercle jaune" width="715" height="715">
+    <div class="bubble" aria-hidden="true"><strong>Votre offre, en clair</strong>Des posts simples, qui donnent envie de vous contacter.<div class="bar"></div><div class="bar s"></div></div>
+    <div class="avail"><i></i><span><b>Disponible</b>pour de nouveaux projets</span></div>
+  </div>
+</div></header>
+
+<section class="band light" id="apropos"><div class="wrap about">
+  <div>
+    <h2>Qui suis-je ?</h2>
+    <p style="margin-top:22px">Je suis Lee O'neil Angelo, community manager freelance basé à Madagascar. Je me suis formé et certifié au community management en 2025, et je suis actuellement en première année de licence en communication à l'université.</p>
+    <p>Aujourd'hui, j'aide les marques à gérer leurs réseaux et à communiquer clairement. Je travaille à distance, à 1 ou 2 heures de décalage avec la France, avec des points réguliers en visio.</p>
+    <div class="badges"><span>Certifié en 2025</span><span>L1 Communication</span><span>Basé à Madagascar</span></div>
+  </div>
+  <video controls playsinline preload="metadata" poster="poster.jpg" aria-label="Vidéo de présentation de Lee O'neil Angelo"><source src="presentation.mp4" type="video/mp4">Votre navigateur ne lit pas cette vidéo.</video>
+</div></section>
+
+<section class="band dark" id="competences"><div class="wrap">
+  <div class="head">
+    <h2>Mes outils au quotidien</h2>
+    <p>Les outils que j'utilise pour créer, programmer et suivre vos contenus.</p>
+  </div>
+  <div class="skills">
+    <div class="sk"><h3>Création visuelle et vidéo</h3><div class="chips"><span>Canva</span><span>CapCut</span></div></div>
+    <div class="sk"><h3>Rédaction assistée par l'IA</h3><div class="chips"><span>Claude Pro</span></div><p style="color:var(--mut);font-size:14.5px;margin:14px 0 0">Chaque texte est relu et réécrit avec mes mots.</p></div>
+    <div class="sk"><h3>Gestion et programmation</h3><div class="chips"><span>Meta Business Suite</span></div></div>
+    <div class="sk"><h3>Réseaux sociaux</h3><div class="chips"><span>LinkedIn</span><span>Facebook</span><span>Instagram</span></div></div>
+  </div>
+</div></section>
+
+<section class="band light" id="projets"><div class="wrap">
+  <div class="head">
+    <h2>Mon travail</h2>
+    <p>Mon projet en cours, avec de vrais visuels, vidéos et documents réalisés pour Norisix.</p>
+  </div>
+  <article class="proj">
+    <div class="pv"><img src="real/appel-paris-1.jpg" alt="Visuel Norisix : Évaluer les risques des modèles d'IA" style="width:min(300px,100%);border-radius:14px;box-shadow:0 20px 40px rgba(0,0,0,.3)"></div>
+    <div class="pb">
+      <span class="live"><i></i>Projet en cours depuis novembre 2026</span>
+      <h3 style="font-size:28px">Norisix sur LinkedIn et Facebook</h3>
+      <p style="margin-top:12px">Je gère la communication de Norisix sur LinkedIn et Facebook : de la stratégie au bilan de chaque semaine.</p>
+      <ul><li>Calendrier éditorial, puis sa révision après les retours de la direction</li><li>Rédaction des posts, en deux propositions, adaptées à chaque réseau</li><li>Visuels, carrousels et vidéos courtes</li><li>Bilan hebdomadaire des statistiques</li></ul>
+      <div class="net"><span>LinkedIn</span><span>Facebook</span></div>
+    </div>
+  </article>
+
+  <h3 class="sub">Visuels et carrousels</h3>
+  <div class="gal-wrap">
+    <div class="gal" id="gal" tabindex="0" aria-label="Galerie des visuels Norisix">
+      <figure><img src="real/avocats-1.jpg" alt="Visuel : Rédiger. Synthétiser. Rechercher." loading="lazy" width="540" height="675"><figcaption>Post « L'IA dans un cabinet d'avocats »</figcaption></figure>
+      <figure><img src="real/avocats-2.jpg" alt="Visuel : Le Conseil national des barreaux pose une règle simple." loading="lazy" width="540" height="675"><figcaption>Post « L'IA dans un cabinet d'avocats », 2e version</figcaption></figure>
+      <figure><img src="real/appel-paris-1.jpg" alt="Carrousel : Évaluer les risques" loading="lazy" width="540" height="675"><figcaption>Carrousel « Appel de Paris », page 1</figcaption></figure>
+      <figure><img src="real/appel-paris-2.jpg" alt="Carrousel : Pouvoir arrêter un modèle" loading="lazy" width="540" height="675"><figcaption>Carrousel « Appel de Paris », page 2</figcaption></figure>
+      <figure><img src="real/appel-paris-3.jpg" alt="Carrousel : Partager les incidents graves" loading="lazy" width="540" height="675"><figcaption>Carrousel « Appel de Paris », page 3</figcaption></figure>
+      <figure><img src="real/appel-paris-4.jpg" alt="Carrousel : L'IA paie, vous validez" loading="lazy" width="540" height="675"><figcaption>Carrousel, page « Autre news IA »</figcaption></figure>
+      <figure><img src="real/mercredi-news-cta.jpg" alt="Dernière page : Abonnez-vous" loading="lazy" width="540" height="675"><figcaption>Dernière page « Mercredi News »</figcaption></figure>
+    </div>
+    <div class="gal-nav"><button type="button" id="prev" aria-label="Visuel précédent">←</button><button type="button" id="next" aria-label="Visuel suivant">→</button></div>
+  </div>
+
+  <div class="docs-row">
+    <div>
+      <h3 class="sub">Vidéo tutoriel</h3>
+      <video class="tuto" controls playsinline preload="none" poster="real/tuto-rdv.jpg" aria-label="Tutoriel Norisix sur la prise de rendez-vous client"><source src="real/tuto-rdv.mp4" type="video/mp4"></video>
+      <p class="cap2">Tuto de 43 secondes avec voix off, format vertical.</p>
+    </div>
+    <div>
+      <h3 class="sub">Documents de travail</h3>
+      <div class="docs">
+        <figure><img src="real/doc-calendrier.jpg" alt="Couverture : Calendrier éditorial" loading="lazy"><figcaption><b>Calendrier éditorial</b>3 semaines, 9 publications</figcaption></figure>
+        <figure><img src="real/doc-revision.jpg" alt="Couverture : Révision du calendrier éditorial" loading="lazy"><figcaption><b>Révision du calendrier</b>Après les retours de la direction</figcaption></figure>
+        <figure><img src="real/doc-avocats.jpg" alt="Couverture : Post Intégration, propositions de texte" loading="lazy"><figcaption><b>Propositions de posts</b>Textes LinkedIn et Facebook prêts à copier</figcaption></figure>
+        <figure><img src="real/doc-bilan.jpg" alt="Couverture : Bilan statistiques LinkedIn et Facebook" loading="lazy"><figcaption><b>Bilan de la semaine</b>Statistiques LinkedIn et Facebook</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band dark" id="services"><div class="wrap">
+  <div class="head">
+    <h2>Ce que je peux faire pour vous</h2>
+    <p>Vous n'avez pas le temps de publier, ou votre page est presque vide ? Je m'occupe de tout, de la stratégie aux posts publiés, en forfait mensuel.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFDB00" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="#FFDB00"/></svg></div>
+      <h3>Stratégie LinkedIn</h3><p>Positionnement, thèmes, ton, rythme de publication et calendrier éditorial semaine par semaine.</p></article>
+    <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFDB00" stroke-width="2" stroke-linecap="round"><path d="M5 4h10l4 4v12H5z"/><path d="M9 11h6M9 15h6"/></svg></div>
+      <h3>Posts prêts à publier</h3><p>Des textes courts et clairs, avec une accroche forte et un seul appel à l'action. Vous relisez, on publie.</p></article>
+    <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFDB00" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="11" height="14" rx="2"/><path d="M17 6v14M20 8v10"/></svg></div>
+      <h3>Visuels et carrousels</h3><p>Images, carrousels PDF et vidéos courtes aux couleurs de votre marque, pensés pour être vus jusqu'au bout.</p></article>
+    <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFDB00" stroke-width="2" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3"/><circle cx="12" cy="13" r="2.5"/></svg></div>
+      <h3>Page entreprise et dirigeants</h3><p>Une page entreprise active et des profils de dirigeants qui inspirent confiance, pas seulement un seul compte.</p></article>
+  </div>
+  <h3 class="sub" style="margin-top:64px">Ma méthode en 4 étapes</h3>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div class="line"></div><h3>Audit</h3><p>J'analyse votre profil, votre page et vos concurrents. Vous repartez avec les points à corriger en priorité.</p><span class="free">Offert</span></div>
+    <div class="step"><div class="n">2</div><div class="line"></div><h3>Stratégie</h3><p>On définit ensemble votre message, vos thèmes de posts, le rythme et le calendrier.</p></div>
+    <div class="step"><div class="n">3</div><div class="line"></div><h3>Contenus</h3><p>Je rédige les posts, je crée les visuels et je programme les publications. Vous validez avant chaque mise en ligne.</p></div>
+    <div class="step"><div class="n">4</div><div class="line"></div><h3>Suivi</h3><p>Chaque fin de mois, un bilan clair : ce qui a marché, ce qu'on ajuste le mois suivant.</p></div>
+  </div>
+</div></section>
+
+<section class="band contact" id="contact"><div class="wrap">
+  <div>
+    <h2>Travaillons ensemble</h2>
+    <p style="margin-top:20px">Commencez par un audit gratuit de vos réseaux. Envoyez-moi le lien de votre page ou de votre profil : je vous réponds avec les premiers points à améliorer, sans engagement.</p>
+    <div class="chan">
+      <a href="mailto:leeoneilangelo0@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7zm14 2.9-7 4.5-7-4.5V17h14z"/></svg><span>E-mail<small>leeoneilangelo0@gmail.com</small></span></a>
+      <a href="https://wa.me/261386846113"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg><span>WhatsApp<small>+261 38 68 461 13</small></span></a>
+      <a href="https://www.linkedin.com/in/leeoneil-angelo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 8.5h3V21H3zM9 8.5h2.9v1.7c.4-.8 1.4-1.9 3.3-1.9 3.4 0 3.8 2.2 3.8 5V21h-3v-6.8c0-1.4-.2-2.8-1.9-2.8-1.8 0-2.1 1.4-2.1 2.7V21H9z"/></svg><span>LinkedIn<small>Lee O'neil Angelo</small></span></a>
+      <a href="https://www.facebook.com/profile.php?id=61574592835854"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.7c0-.9.3-1.5 1.5-1.5h1.5V4.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.2H8v3h2.5V21z"/></svg><span>Facebook<small>Lee O'neil Angelo</small></span></a>
+    </div>
+  </div>
+  <form id="audit" novalidate>
+    <h3>Demande d'audit gratuit</h3>
+    <label for="f-nom">Votre nom<input id="f-nom" name="nom" autocomplete="name" required></label>
+    <label for="f-ent">Votre entreprise ou marque<input id="f-ent" name="entreprise" autocomplete="organization"></label>
+    <label for="f-lien">Lien de votre page ou profil<input id="f-lien" name="lien" type="url" inputmode="url" placeholder="https://www.linkedin.com/company/…"></label>
+    <label for="f-msg">Ce que vous aimeriez améliorer<textarea id="f-msg" name="message"></textarea></label>
+    <a class="btn y" id="send" href="https://wa.me/261386846113">Envoyer ma demande sur WhatsApp</a>
+    <p class="hint">Votre demande s'ouvre dans WhatsApp, prête à envoyer. Rien n'est envoyé sans votre clic.</p>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Lee O'neil Angelo · Community manager freelance · Madagascar</span><span>Votre offre, expliquée en clair.</span></div></footer>
+
+<script>
+{
+  const f = document.getElementById('audit'), a = document.getElementById('send');
+  const build = () => {
+    const v = n => (f.elements[n].value || '').trim();
+    const lines = ['Bonjour Lee, je souhaite un audit gratuit de mes réseaux sociaux.'];
+    if (v('nom')) lines.push('Nom : ' + v('nom'));
+    if (v('entreprise')) lines.push('Entreprise : ' + v('entreprise'));
+    if (v('lien')) lines.push('Lien : ' + v('lien'));
+    if (v('message')) lines.push('Objectif : ' + v('message'));
+    a.href = 'https://wa.me/261386846113?text=' + encodeURIComponent(lines.join('\n'));
+  };
+  f.addEventListener('input', build);
+  f.addEventListener('submit', e => e.preventDefault());
+  const g = document.getElementById('gal');
+  const step = d => g.scrollBy({left: d * (g.querySelector('figure').offsetWidth + 16), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  document.getElementById('prev').addEventListener('click', () => step(-1));
+  document.getElementById('next').addEventListener('click', () => step(1));
+  g.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+  build();
+}
+</script>
+</body>
+</html>
